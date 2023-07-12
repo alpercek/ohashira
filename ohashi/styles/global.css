@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "BIGC";
+  src: url("../styles/BigC.otf");
+}
+
+@font-face {
+  font-family: "KINGC";
+  src: url("../styles/KingsC.otf");
+}
+
+@font-face {
+  font-family: "SONGTI";
+  src: url("../styles/STSongti-SC-Regular-07.otf");
+}
+
+[data-collapsible="true"].bg-white + [data-collapsible="true"].bg-white {
+  @apply pt-0 md:pt-0;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+ background-color: #FCF2E8;
+}

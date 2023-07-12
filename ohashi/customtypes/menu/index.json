@@ -1,0 +1,328 @@
+{
+  "id": "menu",
+  "label": "Menu",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "ramen": {
+        "type": "Group",
+        "config": {
+          "label": "Ramen",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "price": {
+              "type": "StructuredText",
+              "config": {
+                "label": "price",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "spice": {
+              "type": "Select",
+              "config": {
+                "label": "spice",
+                "placeholder": "",
+                "options": ["not-spicy", "spicy", "very-spicy"],
+                "default_value": "not-spicy"
+              }
+            },
+            "diet": {
+              "type": "Select",
+              "config": {
+                "label": "diet",
+                "placeholder": "",
+                "options": ["omnivore", "vegetarian", "vegan"],
+                "default_value": "omnivore"
+              }
+            }
+          }
+        }
+      },
+      "ramen_toppings": {
+        "type": "Group",
+        "config": {
+          "label": "Ramen Toppings",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "price": {
+              "type": "StructuredText",
+              "config": {
+                "label": "price",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "spice": {
+              "type": "Select",
+              "config": {
+                "label": "spice",
+                "placeholder": "",
+                "options": ["not-spicy", "spicy", "very-spicy"],
+                "default_value": "not-spicy"
+              }
+            },
+            "diet": {
+              "type": "Select",
+              "config": {
+                "label": "diet",
+                "placeholder": "",
+                "options": ["omnivore", "vegetarian", "vegan"],
+                "default_value": "omnivore"
+              }
+            }
+          }
+        }
+      },
+      "drinks": {
+        "type": "Group",
+        "config": {
+          "label": "Drinks",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "price": {
+              "type": "StructuredText",
+              "config": {
+                "label": "price",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "spice": {
+              "type": "Select",
+              "config": {
+                "label": "spice",
+                "placeholder": "",
+                "options": ["not-spicy", "spicy", "very-spicy"],
+                "default_value": "not-spicy"
+              }
+            },
+            "diet": {
+              "type": "Select",
+              "config": {
+                "label": "diet",
+                "placeholder": "",
+                "options": ["omnivore", "vegetarian", "vegan"],
+                "default_value": "omnivore"
+              }
+            }
+          }
+        }
+      },
+      "side_dishes": {
+        "type": "Group",
+        "config": {
+          "label": "Side Dishes",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "price": {
+              "type": "StructuredText",
+              "config": {
+                "label": "price",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "spice": {
+              "type": "Select",
+              "config": {
+                "label": "spice",
+                "placeholder": "",
+                "options": ["not-spicy", "spicy", "very-spicy"],
+                "default_value": "not-spicy"
+              }
+            },
+            "diet": {
+              "type": "Select",
+              "config": {
+                "label": "diet",
+                "placeholder": "",
+                "options": ["omnivore", "vegetarian", "vegan"],
+                "default_value": "omnivore"
+              }
+            }
+          }
+        }
+      },
+      "curry": {
+        "type": "Group",
+        "config": {
+          "label": "Curry",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "price": {
+              "type": "StructuredText",
+              "config": {
+                "label": "price",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "spice": {
+              "type": "Select",
+              "config": {
+                "label": "spice",
+                "placeholder": "",
+                "options": ["not-spicy", "spicy", "very-spicy"],
+                "default_value": "not-spicy"
+              }
+            },
+            "diet": {
+              "type": "Select",
+              "config": {
+                "label": "diet",
+                "placeholder": "",
+                "options": ["omnivore", "vegetarian", "vegan"],
+                "default_value": "omnivore"
+              }
+            }
+          }
+        }
+      },
+      "deserts": {
+        "type": "Group",
+        "config": {
+          "label": "Deserts",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "price": {
+              "type": "StructuredText",
+              "config": {
+                "label": "price",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "spice": {
+              "type": "Select",
+              "config": {
+                "label": "spice",
+                "placeholder": "",
+                "options": ["not-spicy", "spicy", "very-spicy"],
+                "default_value": "not-spicy"
+              }
+            },
+            "diet": {
+              "type": "Select",
+              "config": {
+                "label": "diet",
+                "placeholder": "",
+                "options": ["omnivore", "vegetarian", "vegan"],
+                "default_value": "omnivore"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
