@@ -176,15 +176,16 @@ li{
 .mshowmenu{
   max-height: 60rem;
 }
-
+@media (min-width: 768px) {
 .marginfirst:first-child{
-  @media (min-width: 768px) {
     margin-bottom: 950vmax
-  }
+  }}
+
   @media (min-width: 1024px) {
+    .marginfirst:first-child{
     margin-bottom: 350vmax
-  }
- 
+  }}
+  .marginfirst:first-child{
     margin-bottom: 1050vmax
   
 }
