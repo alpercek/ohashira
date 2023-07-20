@@ -2,7 +2,7 @@
   <Component
     :is="as"
     :data-collapsible="collapsible || null"
-    class="px-[30px] lg:px-[18vw]"
+    class="px-[30px] lg:px-[18vw] lg:pb-[200px]"
     :class="{
       
       'pb-[17px] md:py-[50px]': yPadding === 'base',

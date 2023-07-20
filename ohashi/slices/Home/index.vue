@@ -7,12 +7,12 @@
     <p class="text-center text-2xl md:text-4xl font-songti tracking-[-0.02em]">ラーメン大橋</p>
 
 
-    <div class="md:flex md:mt-16 mt-6 gap-6 justify-center"><div class="md:w-[calc(32vw-0.75rem)]"><PrismicImage :field="slice.primary.image1" class="w-full" /><PrismicRichText :field="slice.primary.label1"  class="hidden md:block text-right text-xl italic font-kingscarlos tracking-[-0.015em] text-[#969696]"/></div>
+    <div class="md:flex md:mt-16 mt-6 gap-6 justify-center"><div class="md:w-[calc(32vw-0.75rem)]"><PrismicImage :field="slice.primary.image1" class="w-full" /><PrismicRichText :field="slice.primary.label1"  class="hidden pr-[5px] md:block text-right text-xl italic font-kingscarlos tracking-[-0.015em] text-[#969696]"/></div>
 
     <div class="md:hidden text-center max-w-xl m-auto text-2xl md:text-4xl tracking-[-0.02em] font-bigcarlos text-[#725741] mt-7 leading-[1.875rem]">Authentic Japanese handmade ramen noodles by chef <span class="underline">Masanao Ohashi</span></div>
     <div class="flex flex-wrap md:hidden justify-evenly gap-x-2 xl:text-xl text-[#725741] font-bigcarlos mt-9"><PrismicRichText :field="settings.data.siteTitle" class="italic" /><PrismicRichText :field="settings.data.street" /><PrismicRichText :field="settings.data.city" /><PrismicRichText :field="settings.data.phone" /><PrismicRichText :field="settings.data.mail" /></div>
 
-    <div class="md:w-[calc(32vw-0.75rem)] mt-8 md:mt-0"><PrismicImage :field="slice.primary.image2" class="w-full" /><PrismicRichText :field="slice.primary.label2"  class="hidden md:block text-right text-xl italic font-kingscarlos tracking-[-0.015em] text-[#969696]"/></div></div>
+    <div class="md:w-[calc(32vw-0.75rem)] mt-8 md:mt-0"><PrismicImage :field="slice.primary.image2" class="w-full" /><PrismicRichText :field="slice.primary.label2"  class="hidden pr-[5px] md:block text-right text-xl italic font-kingscarlos tracking-[-0.015em] text-[#969696]"/></div></div>
   
     <div @click="expanded = !expanded" :class="{ expand: expanded}" class="md:hidden font-kingscarlos text-center text-xl tracking-[-0.015em] text-[#725741] leading-[1.5rem] mt-11 max-h-[calc(350px-29vw)] overflow-hidden transition-all"><PrismicRichText :field="about.data.about" /></div><div @click="expanded = !expanded" :class="{ hide: expanded}" class="m-auto md:hidden font-kingscarlos text-center text-xl tracking-[-0.015em] text-[#725741] leading-[1.5rem]">(more...)</div>
     

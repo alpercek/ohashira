@@ -3,10 +3,10 @@
  <div id="video" class="hidden fixed z-50 top-0 left-0 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-screen h-screen md:max-w-[500px] bg-black md:bg-transparent flex-col items-center justify-center"><p @click="HideVideo" class=" cursor-pointer h-0 z-50 text-4xl text-[#DCE0DF]">&#10005;</p><video id="vd" :src="video.url"></video></div>
   <SliceZone :slices="page.data.slices" :components="components" />
   
-  <PrismicImage :field="page.data.bottom_image" class="m-auto"/>
-  <p class="text-center font-kingscarlos italic text-[#725E43] md:text-2xl tracking-tight px-[30px]">design by julian sirre · illustration by <a href="https://viktorhachmang.nl/">viktor hachmang</a> · build by alper çekinmez</p>
-  <div class="absolute top-0 z-[-99]" id="background" ><div v-for="(item, i) in page.data.background" :key="`slice-item-${i}`" class="lg:mb-[100vmax] md:mb-[180vmax] mb-[400vmax]">
-  <PrismicImage :field="item.image" class="h-[100vmax] object-cover"/>
+  <PrismicImage :field="page.data.bottom_image" class="m-auto pt-[300px]"/>
+  <p class="text-center font-kingscarlos italic text-[#725E43] md:text-2xl tracking-tight px-[30px] pb-[100px]">design by julian sirre · illustration by <a href="https://viktorhachmang.nl/">viktor hachmang</a> · build by alper çekinmez</p>
+  <div class="absolute top-0 z-[-99]" id="background" ><div v-for="(item, i) in page.data.background" :key="`slice-item-${i}`" class="marginfirst" >
+  <PrismicImage :field="item.image" class="h-[100vmax] object-cover "/>
   </div></div>
   <button id="topitop" class="fixed duration-1000 bottom-28 md:bottom-1/3 right-0 lg:right-12 transition-all opacity-0 text-[#725E43]  font-kingscarlos bold text-5xl" @click="toTop()">&#8593;</button>
 
@@ -29,7 +29,7 @@
      <div v-if="item.slice_type != 'how_to_eat_ramen' && item.slice_type != 'about'"> {{ item.slice_type }} </div><div v-if="item.slice_type == 'how_to_eat_ramen'" >how to eat ramen</div>
   </div></div></div>
 
-  <div id="closedSign" class="fixed text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden justify-items-center"><div class="font-songti tracking-[-0.02em] text-[3.5rem]">営業中</div><div class="font-bigcarlos tracking-[-0.02em] text-[2.5rem] border-t-[1px] border-black w-[200%]">We are closed</div></div>
+  <div id="closedSign" class="fixed delay-200 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden justify-items-center transition-all"><div class="font-songti tracking-[-0.02em] text-[3.5rem]">営業中</div><div class="font-bigcarlos tracking-[-0.02em] text-[2.5rem] border-t-[1px] border-black w-[200%]">We are closed</div></div>
    
 </div>
 </template>
@@ -91,7 +91,7 @@ export default {
     
       
       var st = window.pageYOffset || document.documentElement.scrollTop;
-      document.getElementById("background").style.top = st*-1.5 + "px"
+      document.getElementById("background").style.top = st*-.3 + "px"
 
       if (st > lastScrollTop) {
     document.getElementById("topitop").style.opacity = 0
@@ -100,7 +100,7 @@ export default {
    }
    lastScrollTop = st <= 0 ? 0 : st;
 
-   
+   document.getElementById('closedSign').style.opacity = "0"
    
   
    for (let index = 0; index < sections.length; index++) {
@@ -176,4 +176,17 @@ li{
 .mshowmenu{
   max-height: 60rem;
 }
+
+.marginfirst:first-child{
+  @media (min-width: 768px) {
+    margin-bottom: 950vmax
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 350vmax
+  }
+ 
+    margin-bottom: 1050vmax
+  
+}
+
 </style>
