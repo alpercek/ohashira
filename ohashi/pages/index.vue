@@ -176,7 +176,7 @@ li{
   }}
 .fadein{
   animation-name: fadein;
-  animation-duration: 3s;
+  animation-duration: 4s;
 }
 @keyframes fadein{
   from {opacity: 0;}
