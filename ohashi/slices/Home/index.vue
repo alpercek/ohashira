@@ -1,7 +1,7 @@
 <template>
   <Bounded as="section" class="relative">
 
-    <PrismicImage :field="slice.primary.littletext" class="hidden md:block absolute right-[14%] top-[calc(19vw+345px)] w-[2.6%] animate-[ping_1s_ease-in-out_1.5s_1_reverse_backwards]" />
+    <PrismicImage :field="slice.primary.littletext" class="hidden md:block absolute right-[14%] top-[calc(19vw+345px)] w-[2.6%]" />
 
     <p class="text-center text-2xl md:text-5xl md:pt-14 text-[#725E43] font-bigcarlos tracking-[-0.02em]">Welcome to Ramen Ohashi</p>
     <p class="text-center text-2xl md:text-4xl font-songti tracking-[-0.02em]">ラーメン大橋</p>

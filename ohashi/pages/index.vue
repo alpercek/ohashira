@@ -5,17 +5,11 @@
   
   <PrismicImage :field="page.data.bottom_image" class="m-auto pt-[300px]"/>
   <p class="text-center font-kingscarlos italic text-[#725E43] md:text-2xl tracking-tight px-[30px] pb-[100px]">design by julian sirre · illustration by <a href="https://viktorhachmang.nl/">viktor hachmang</a> · build by alper çekinmez</p>
-  <div class="absolute top-0 z-[-99]" id="background" ><div v-for="(item, i) in page.data.background" :key="`slice-item-${i}`" class="marginfirst" >
+  <div class="absolute top-0 z-[-99]" id="background" ><div v-for="(item, i) in page.data.background" :key="`slice-item-${i}`" class="marginfirst fadein" >
   <PrismicImage :field="item.image" class="h-[100vmax] object-cover "/>
   </div></div>
   <button id="topitop" class="fixed duration-1000 bottom-28 md:bottom-1/3 right-0 lg:right-12 transition-all opacity-0 text-[#725E43]  font-kingscarlos bold text-5xl" @click="toTop()">&#8593;</button>
 
-  <div class="fixed z-50 inset-0 pointer-events-none hidden lg:flex"><PrismicImage :field="page.data.doors" class="absolute bg-[#FCF2E8] object-cover lg:w-[50%] h-[100vmax] top-1/2  lg:left-0 object-center slideLeft lg:object-left -translate-y-1/2"/>
-    
-    <PrismicImage :field="page.data.doors" class="hidden lg:block absolute bg-[#FCF2E8] object-cover w-[50%] h-[100vmax] top-1/2 right-0 object-right -translate-y-1/2 slideRight"/>
-    <PrismicImage :field="page.data.littletext" class="z-50 absolute h-2/6 left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 animate-[ping_0.5s_ease-in_0.3s_1_normal_forwards]" />
-    <PrismicRichText :field="page.data.title" class="font-bigcarlos text-8xl mx-auto text-black z-50 mt-24 animate-[ping_0.5s_ease-in_0s_1_normal_forwards]"/>
-  </div>
     
   <div class="fixed top-[17px] md:top-[75px] lg:right-[18vw] right-[30px] z-40">
     <div class="grid justify-items-end">
@@ -143,20 +137,7 @@ export default {
 }
 </script>
 <style>
-.slideLeft{
-  animation: slideLeft 1s ease-in 0.7s 1 normal forwards;
-}
-@keyframes slideLeft {
-  from {left: 0vw}
-  to {left: -50vw}
-}
-.slideRight{
-  animation: slideRight 1s ease-in 0.7s 1 normal forwards;
-}
-@keyframes slideRight {
-  from {right: 0vw}
-  to {right: -50vw}
-}
+
 li{
   list-style-type: ""
 }
@@ -181,13 +162,20 @@ li{
     margin-bottom: 950vmax
   }}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
     .marginfirst:first-child{
     margin-bottom: 350vmax
   }}
-  .marginfirst:first-child{
+@media (max-width: 768px) {
+    .marginfirst:first-child{
     margin-bottom: 1050vmax
-  
+  }}
+.fadein{
+  animation-name: fadein;
+  animation-duration: 3s;
 }
-
+@keyframes fadein{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 </style>
