@@ -4,15 +4,15 @@
     <p class="text-center text-2xl md:text-4xl font-songti font-bold tracking-[-0.02em]">メニュー</p>
 
 <div class="md:absolute top-[4.5rem] text-[1.313rem] font-kingscarlos tracking-[-0.015em] leading-5 checkbox-circle md:block grid grid-rows-6 grid-flow-col mt-10 md:mt-0">
-  <input type="checkbox" id="vegetarian" name="vegetarian" value="vegetarian" @change="change()" class="acheckbox">
+  <input type="checkbox" id="vegetarian" name="vegetarian" value="vegetarian" @change="change($event)" class="acheckbox">
   <label for="vegetarian">Vegetarian</label><br>
-  <input type="checkbox" id="vegan" name="vegan" value="vegan" @change="change()" class="acheckbox">
+  <input type="checkbox" id="vegan" name="vegan" value="vegan" @change="change($event)" class="acheckbox">
   <label for="vegan">Vegan</label><br>
-  <input type="checkbox" id="spicy" name="spicy" value="spicy" @change="change()" class="sacheckbox">
+  <input type="checkbox" id="spicy" name="spicy" value="spicy" @change="change($event)" class="sacheckbox">
   <label for="spicy">Spicy</label><br>
-  <input type="checkbox" id="very-spicy" name="very-spicy" value="very-spicy" @change="change()" class="sacheckbox">
+  <input type="checkbox" id="very-spicy" name="very-spicy" value="very-spicy" @change="change($event)" class="sacheckbox">
   <label for="very-spicy">Very Spicy</label><br>
-  <input type="checkbox" id="not-spicy" name="not-spicy" value="not-spicy" @change="change()" class="sacheckbox">
+  <input type="checkbox" id="not-spicy" name="not-spicy" value="not-spicy" @change="change($event)" class="sacheckbox">
   <label for="not-spicy">Not Spicy</label><br>
 </div>
 
@@ -121,7 +121,31 @@ export default {
     }
   },
   methods: {
-    change() {
+    change(event) {
+  switch (event.target.name) {
+        case "vegan":
+          document.getElementById("vegetarian").checked = false
+          break;
+          case "vegetarian":
+          document.getElementById("vegan").checked = false
+          break;
+          case "spicy":
+          document.getElementById("not-spicy").checked = false
+          document.getElementById("very-spicy").checked = false
+          break;
+          case "not-spicy":
+          document.getElementById("spicy").checked = false
+          document.getElementById("very-spicy").checked = false
+          break;
+          case "very-spicy":
+          document.getElementById("not-spicy").checked = false
+          document.getElementById("spicy").checked = false
+          break;
+      
+        default:
+          break;
+      }
+
   var modelCbs = document.getElementsByClassName("acheckbox")
   var processorCbs = document.getElementsByClassName("sacheckbox")
   var filters = {
