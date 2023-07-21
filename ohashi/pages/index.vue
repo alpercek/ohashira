@@ -11,7 +11,7 @@
   <button id="topitop" class="fixed duration-1000 bottom-28 md:bottom-1/3 right-0 lg:right-12 transition-all opacity-0 text-[#725E43]  font-kingscarlos bold text-5xl" @click="toTop()">&#8593;</button>
 
     
-  <div class="fixed top-[17px] md:top-[75px] lg:right-[4vw] right-[30px] z-40 md:w-[195px]">
+  <div class="fixed top-[17px] md:top-[75px] lg:right-[9vw] right-[30px] z-40 md:w-[195px]">
     <div class="grid md:justify-items-center justify-items-end">
       <div @click="expandMenu = !expandMenu" class="cursor-pointer"><div :class="{ chopstick: expandMenu}" class="h-[0.6rem] w-[2rem] transition-all border-black border-t-[2.5px]" ></div><div class="h-[0.6rem] w-[2rem] border-black border-t-[2.5px]"></div><div class="h-[0.6rem] w-[2rem] border-black border-t-[2.5px]"></div></div>
   <div id="menue" :class="{ showmenu: expandMenu}" class="overflow-hidden transition-all max-h-0 hidden md:block"><div v-for="(item, i) in page.data.slices" :key="`slice-item-${i}`" @click="skate(i)" id="obilemen" class="text-center font-bigcarlos text-2xl text-[#725E43] tracking-[-0.02em] cursor-pointer">
