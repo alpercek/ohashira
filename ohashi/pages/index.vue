@@ -5,8 +5,8 @@
   
   <PrismicImage :field="page.data.bottom_image" class="m-auto pt-[300px]"/>
   <p class="text-center font-kingscarlos regularitalic text-[#725E43] md:text-2xl tracking-tight px-[30px] pb-[100px]">design by julian sirre · illustration by <a href="https://viktorhachmang.nl/">viktor hachmang</a> · build by alper çekinmez</p>
-  <div class="absolute top-0 z-[-99]" id="background" ><div v-for="(item, i) in page.data.background" :key="`slice-item-${i}`" class="marginfirst fadein" >
-  <PrismicImage :field="item.image" class="h-[100vmax] object-cover "/>
+  <div class="absolute top-0 z-[-99]" id="background" ><div v-for="(item, i) in page.data.background" :key="`slice-item-${i}`" class="" >
+  <PrismicImage :field="item.image" class="h-[100vmax] object-cover walls opacity-0"/>
   </div></div>
   <button id="topitop" class="fixed duration-1000 bottom-28 md:bottom-1/3 right-0 lg:right-12 transition-all opacity-0 text-[#725E43] scale-y-50 text-2xl -translate-x-1/4" @click="toTop()">▲</button>
 
@@ -82,6 +82,17 @@ export default {
     let list = document.getElementById("menue").children
     let sections = document.getElementsByTagName("section")
     list[0].firstElementChild.classList.add("onview")
+    let vmax;
+
+    if(window.innerHeight > window.innerWidth){
+      vmax = window.innerHeight
+    }
+    else{
+      vmax = window.innerWidth
+    }
+    document.getElementsByClassName("walls")[0].classList.add("fadein")
+    document.getElementsByClassName("walls")[0].style.marginBottom = sections[2].offsetTop*1.3-vmax + "px"
+    
     document.addEventListener("scroll", function(){ 
     
       
@@ -94,9 +105,6 @@ export default {
     document.getElementById("topitop").style.opacity = 1
    }
    lastScrollTop = st <= 0 ? 0 : st;
-
-   document.getElementById('closedSign').style.opacity = "0"
-   
   
    for (let index = 0; index < sections.length; index++) {
     if (index < sections.length-1) {
@@ -106,6 +114,10 @@ export default {
         
       }
       list[index].firstElementChild.classList.add("onview")
+
+      if(index == 2){
+      document.getElementsByClassName("walls")[1].classList.add("fadein")
+      }
     }
   }
   else{
@@ -136,6 +148,16 @@ export default {
       sign.style.display = "grid"
       message.innerText = "We will be open next Tuesday"
      }
+
+
+    document.addEventListener("scroll", function() {
+
+      document.getElementById('closedSign').style.opacity = "0"
+      setTimeout(() => {
+        document.getElementById('closedSign').style.display = "none"
+      }, 4000);
+
+}, {once : true});
   }
 
 }
@@ -164,22 +186,10 @@ li{
 .mshowmenu{
   max-height: 60rem;
 }
-@media (min-width: 768px) {
-.marginfirst:first-child{
-    margin-bottom: 950vmax
-  }}
-
-@media (min-width: 1024px) {
-    .marginfirst:first-child{
-    margin-bottom: 350vmax
-  }}
-@media (max-width: 768px) {
-    .marginfirst:first-child{
-    margin-bottom: 1050vmax
-  }}
 .fadein{
   animation-name: fadein;
   animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 @keyframes fadein{
   from {opacity: 0;}
