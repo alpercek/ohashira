@@ -17,6 +17,16 @@
   font-family: "SONGTI";
   src: url("../styles/STSongti-SC-Regular-07.otf");
 }
+@font-face {
+  font-family: "displayitaly";
+  src: url("../styles/disial.otf");
+}
+@font-face {
+  font-family: "regitaly";
+  src: url("../styles/rgital.otf");
+}
+
+
 
 [data-collapsible="true"].bg-white + [data-collapsible="true"].bg-white {
   @apply pt-0 md:pt-0;
@@ -31,4 +41,17 @@ html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
  background-color: #FCF2E8;
+}
+
+.italic{
+  font-style: normal;
+  font-family: "displayitaly";
+}
+em{
+  font-style: normal;
+  font-family: "regitaly";
+}
+.regularitalic{
+  font-style: normal;
+  font-family: "regitaly";
 }

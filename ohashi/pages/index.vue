@@ -4,11 +4,11 @@
   <SliceZone :slices="page.data.slices" :components="components" />
   
   <PrismicImage :field="page.data.bottom_image" class="m-auto pt-[300px]"/>
-  <p class="text-center font-kingscarlos italic text-[#725E43] md:text-2xl tracking-tight px-[30px] pb-[100px]">design by julian sirre · illustration by <a href="https://viktorhachmang.nl/">viktor hachmang</a> · build by alper çekinmez</p>
+  <p class="text-center font-kingscarlos regularitalic text-[#725E43] md:text-2xl tracking-tight px-[30px] pb-[100px]">design by julian sirre · illustration by <a href="https://viktorhachmang.nl/">viktor hachmang</a> · build by alper çekinmez</p>
   <div class="absolute top-0 z-[-99]" id="background" ><div v-for="(item, i) in page.data.background" :key="`slice-item-${i}`" class="marginfirst fadein" >
   <PrismicImage :field="item.image" class="h-[100vmax] object-cover "/>
   </div></div>
-  <button id="topitop" class="fixed duration-1000 bottom-28 md:bottom-1/3 right-0 lg:right-12 transition-all opacity-0 text-[#725E43]  font-kingscarlos bold text-5xl" @click="toTop()">&#8593;</button>
+  <button id="topitop" class="fixed duration-1000 bottom-28 md:bottom-1/3 right-0 lg:right-12 transition-all opacity-0 text-[#725E43] scale-y-50 text-2xl -translate-x-1/4" @click="toTop()">▲</button>
 
     
   <div class="fixed top-[17px] md:top-[75px] lg:right-[9vw] right-[30px] z-40 md:w-[195px]">
