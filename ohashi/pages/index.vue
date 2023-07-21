@@ -11,16 +11,16 @@
   <button id="topitop" class="fixed duration-1000 bottom-28 md:bottom-1/3 right-0 lg:right-12 transition-all opacity-0 text-[#725E43]  font-kingscarlos bold text-5xl" @click="toTop()">&#8593;</button>
 
     
-  <div class="fixed top-[17px] md:top-[75px] lg:right-[9vw] right-[30px] z-40 md:w-[102px]">
+  <div class="fixed top-[17px] md:top-[75px] lg:right-[4vw] right-[30px] z-40 md:w-[195px]">
     <div class="grid md:justify-items-center justify-items-end">
       <div @click="expandMenu = !expandMenu" class="cursor-pointer"><div :class="{ chopstick: expandMenu}" class="h-[0.6rem] w-[2rem] transition-all border-black border-t-[2.5px]" ></div><div class="h-[0.6rem] w-[2rem] border-black border-t-[2.5px]"></div><div class="h-[0.6rem] w-[2rem] border-black border-t-[2.5px]"></div></div>
-  <div id="menue" :class="{ showmenu: expandMenu}" class="overflow-hidden transition-all max-h-0 hidden md:block"><div v-for="(item, i) in page.data.slices" :key="`slice-item-${i}`" @click="skate(i)" class="text-center font-bigcarlos text-2xl text-[#725E43] tracking-[-0.02em] cursor-pointer">
-     <li v-if="item.slice_type != 'how_to_eat_ramen'"> {{ item.slice_type }} </li><li v-if="item.slice_type == 'how_to_eat_ramen'" >how to eat</li>
+  <div id="menue" :class="{ showmenu: expandMenu}" class="overflow-hidden transition-all max-h-0 hidden md:block"><div v-for="(item, i) in page.data.slices" :key="`slice-item-${i}`" @click="skate(i)" id="obilemen" class="text-center font-bigcarlos text-2xl text-[#725E43] tracking-[-0.02em] cursor-pointer">
+     <li v-if="item.slice_type != 'how_to_eat_ramen'"> {{ item.slice_type }} </li><li v-if="item.slice_type == 'how_to_eat_ramen'" >how to eat Ramen</li>
   </div></div>
   </div>
   </div>
   <div :class="{ mshowmenu: expandMenu}" class=" overflow-hidden transition-all max-h-0 fixed top-0 w-screen md:hidden bg-[#DCE0DF]/80 z-30 h-screen" ><div class="mt-28" > <div id="mobilemen" v-for="(item, i) in page.data.slices" :key="`slice-item-${i}`" @click="skate(i)" class="text-center font-bigcarlos text-4xl text-[#725E43] tracking-[-0.02em] mb-12 cursor-pointer">
-     <div v-if="item.slice_type != 'how_to_eat_ramen' && item.slice_type != 'about'"> {{ item.slice_type }} </div><div v-if="item.slice_type == 'how_to_eat_ramen'" >how to eat ramen</div>
+     <div v-if="item.slice_type != 'how_to_eat_ramen' && item.slice_type != 'about'"> {{ item.slice_type }} </div><div v-if="item.slice_type == 'how_to_eat_ramen'" >how to eat Ramen</div>
   </div></div></div>
 
   <div id="closedSign" class="fixed delay-[2000ms] duration-300 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden justify-items-center transition-all"><div class="font-songti tracking-[-0.02em] text-[3.5rem]">営業中</div><div class="font-bigcarlos tracking-[-0.02em] text-[2.5rem] border-t-[1px] border-black w-[200%] leading-tight">We are closed</div>
@@ -156,6 +156,9 @@ li{
   transform-origin: right;
 }
 #mobilemen:first-letter{
+  text-transform: uppercase;
+}
+#obilemen:first-letter{
   text-transform: uppercase;
 }
 .mshowmenu{
