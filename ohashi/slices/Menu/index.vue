@@ -41,12 +41,45 @@
   <PrismicImage :field="slice.primary.image3" class="w-full"/>
   <PrismicImage :field="slice.primary.image4" class="w-3/4 mt-6 hidden md:block" />
   <div class="font-bigcarlos text-3xl tracking-[-0.02em] mt-12"><span @click="expand2($event)" class="md:hidden flex relative justify-center"><div class="left-3 w-6 h-6 rotate-[225deg] origin-[65%65%] pointer-events-none border-[#725741] border-r-4 border-b-4 absolute" ></div>Drinks</span> <span class="hidden md:block">Drinks</span></div>
-  <div class="overflow-hidden transition-all max-h-[999rem]"><div v-for="(item, i) in menu.data.drinks" :key="`slice-item-${i}`" :class="[item.spice , item.diet , 'lll']" class="mt-5 font-kingscarlos text-xl tracking-[-0.02em] flex gap-6 justify-between md:justify-start overflow-hidden">
+  
+  <div class="overflow-hidden transition-all max-h-[999rem]">
+  <div class="font-kingscarlos text-xl tracking-[-0.02em] pl-[5px]">Beer</div>
+  <div class="overflow-hidden transition-all max-h-[999rem]"><div v-for="(item, i) in menu.data.drinks" :key="`slice-item-${i}`" :class="[item.spice , item.diet , 'lll']" class="mb-5 font-kingscarlos text-xl tracking-[-0.02em] flex gap-6 justify-between md:justify-start overflow-hidden">
   <div class="w-[79%] overflow-hidden"><PrismicRichText :field="item.title" @mouseover="expandfr($event)" @mouseout="collapsefr($event)" @click="expand($event)" class="cursor-pointer select-none"/>
   <PrismicRichText :field="item.description" class="text-lg transition-all max-h-0" /></div>
   <PrismicRichText :field="item.price" />
 </div></div>
-
+<div class="font-kingscarlos text-xl tracking-[-0.02em] pl-[5px]">Shōchū</div>
+<div class="overflow-hidden transition-all max-h-[999rem]"><div v-for="(item, i) in menu.data.shochu" :key="`slice-item-${i}`" :class="[item.spice , item.diet , 'lll']" class="mb-5 font-kingscarlos text-xl tracking-[-0.02em] flex gap-6 justify-between md:justify-start overflow-hidden">
+  <div class="w-[79%] overflow-hidden"><PrismicRichText :field="item.title" @mouseover="expandfr($event)" @mouseout="collapsefr($event)" @click="expand($event)" class="cursor-pointer select-none"/>
+  <PrismicRichText :field="item.description" class="text-lg transition-all max-h-0" /></div>
+  <PrismicRichText :field="item.price" />
+</div></div>
+<div class="font-kingscarlos text-xl tracking-[-0.02em] pl-[5px]">Sake</div>
+<div class="overflow-hidden transition-all max-h-[999rem]"><div v-for="(item, i) in menu.data.sake" :key="`slice-item-${i}`" :class="[item.spice , item.diet , 'lll']" class="mb-5 font-kingscarlos text-xl tracking-[-0.02em] flex gap-6 justify-between md:justify-start overflow-hidden">
+  <div class="w-[79%] overflow-hidden"><PrismicRichText :field="item.title" @mouseover="expandfr($event)" @mouseout="collapsefr($event)" @click="expand($event)" class="cursor-pointer select-none"/>
+  <PrismicRichText :field="item.description" class="text-lg transition-all max-h-0" /></div>
+  <PrismicRichText :field="item.price" />
+</div></div>
+<div class="font-kingscarlos text-xl tracking-[-0.02em] pl-[5px]">Wine</div>
+<div class="overflow-hidden transition-all max-h-[999rem]"><div v-for="(item, i) in menu.data.wine" :key="`slice-item-${i}`" :class="[item.spice , item.diet , 'lll']" class="mb-5 font-kingscarlos text-xl tracking-[-0.02em] flex gap-6 justify-between md:justify-start overflow-hidden">
+  <div class="w-[79%] overflow-hidden"><PrismicRichText :field="item.title" @mouseover="expandfr($event)" @mouseout="collapsefr($event)" @click="expand($event)" class="cursor-pointer select-none"/>
+  <PrismicRichText :field="item.description" class="text-lg transition-all max-h-0" /></div>
+  <PrismicRichText :field="item.price" />
+</div></div>
+<div class="font-kingscarlos text-xl tracking-[-0.02em] pl-[5px]">Whisky</div>
+<div class="overflow-hidden transition-all max-h-[999rem]"><div v-for="(item, i) in menu.data.whisky" :key="`slice-item-${i}`" :class="[item.spice , item.diet , 'lll']" class="mb-5 font-kingscarlos text-xl tracking-[-0.02em] flex gap-6 justify-between md:justify-start overflow-hidden">
+  <div class="w-[79%] overflow-hidden"><PrismicRichText :field="item.title" @mouseover="expandfr($event)" @mouseout="collapsefr($event)" @click="expand($event)" class="cursor-pointer select-none"/>
+  <PrismicRichText :field="item.description" class="text-lg transition-all max-h-0" /></div>
+  <PrismicRichText :field="item.price" />
+</div></div>
+<div class="font-kingscarlos text-xl tracking-[-0.02em] pl-[5px]">Soft Drinks</div>
+<div class="overflow-hidden transition-all max-h-[999rem]"><div v-for="(item, i) in menu.data.soft_drinks" :key="`slice-item-${i}`" :class="[item.spice , item.diet , 'lll']" class="mb-5 font-kingscarlos text-xl tracking-[-0.02em] flex gap-6 justify-between md:justify-start overflow-hidden">
+  <div class="w-[79%] overflow-hidden"><PrismicRichText :field="item.title" @mouseover="expandfr($event)" @mouseout="collapsefr($event)" @click="expand($event)" class="cursor-pointer select-none"/>
+  <PrismicRichText :field="item.description" class="text-lg transition-all max-h-0" /></div>
+  <PrismicRichText :field="item.price" />
+</div></div>
+</div>
 </div>
 
 <PrismicImage :field="slice.primary.image2" class="w-full mt-6 md:hidden "/>
