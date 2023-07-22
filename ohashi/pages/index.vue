@@ -1,6 +1,6 @@
 <template><div>
   
- <div id="video" class="hidden fixed z-50 top-0 left-0 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-screen h-screen md:max-w-[500px] bg-black md:bg-transparent flex-col items-center justify-center"><p @click="HideVideo" class=" cursor-pointer h-0 z-50 text-4xl text-[#DCE0DF]">&#10005;</p><video id="vd" :src="video.url"></video></div>
+ <div id="video" class="hidden fixed z-50 top-0 left-0 md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 w-screen h-screen md:max-w-[500px] bg-black md:bg-transparent flex-col items-center justify-center"><div @click="HideVideo" class=" cursor-pointer md:h-0 z-50 text-4xl text-[#DCE0DF] absolute md:static">&#10005;</div><video id="vd" :src="video.url"></video></div>
   <SliceZone :slices="page.data.slices" :components="components" />
   
   <PrismicImage :field="page.data.bottom_image" class="m-auto pt-[300px]"/>
