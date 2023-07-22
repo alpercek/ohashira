@@ -4,7 +4,7 @@
     <PrismicImage :field="slice.primary.littletext" class="hidden md:block absolute right-[14%] top-[calc(19vw+345px)] w-[2.6%]" />
 
     <p class="text-center text-2xl md:text-5xl md:pt-14 text-[#725E43] font-bigcarlos tracking-[-0.02em]">Welcome to Ramen Ohashi</p>
-    <p class="text-center text-2xl md:text-4xl font-songti tracking-[-0.02em]">ラーメン大橋</p>
+    <p class="text-center text-2xl md:text-4xl text-[#2C425F] font-songti tracking-[-0.02em]">ラーメン大橋</p>
 
 
     <div class="md:flex md:mt-16 mt-6 gap-6 justify-center"><div class="md:w-[calc(32vw-0.75rem)]"><PrismicImage :field="slice.primary.image1" class="w-full" /><PrismicRichText :field="slice.primary.label1"  class="hidden pr-[5px] md:block text-right text-xl italic font-kingscarlos tracking-[-0.015em] text-[#969696]"/></div>

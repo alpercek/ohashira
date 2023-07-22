@@ -1,9 +1,9 @@
 <template>
   <Bounded as="section" class="!pb-0">
-    <p class="text-center text-2xl md:text-5xl md:pt-14 text-[#725E43] font-bigcarlos">How to eat Ramen</p>
-    <p class="text-center text-2xl md:text-4xl font-songti tracking-[-0.02em]">ラーメン大橋</p>
+    <p class="text-center text-2xl md:text-5xl md:pt-14  font-bigcarlos">How to eat Ramen</p>
+    <p class="text-center text-2xl md:text-4xl font-songti text-[#725741] tracking-[-0.02em]">ラーメン大橋</p>
 
-    <div class="py-9 md:py-11 md:grid md:grid-cols-10 gap-9">
+    <div class="py-9 md:py-11 md:grid md:grid-cols-10 gap-9 text-[#725741]">
     <PrismicImage :field="slice.items[0].image" class="md:col-start-1 md:col-end-7 md:order-1"/>
     <div class="font-bigcarlos text-4xl tracking-[-0.02em] my-9 md:m-0 md:col-start-7 md:col-end-11 md:order-2"> 1. <PrismicRichText :field="slice.items[0].description"  class="text-3xl font-kingscarlos tracking-[-0.015em]"/></div>
     <PrismicImage :field="slice.items[1].image" class="md:col-start-7 md:col-end-11 md:order-4"/>

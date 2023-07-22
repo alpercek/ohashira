@@ -1,7 +1,7 @@
 <template>
    <Bounded as="section" class="mt-20 md:mt-0">
-    <p class="text-center text-2xl md:text-5xl md:pt-14 text-[#725E43] font-bigcarlos tracking-[-0.02em]">Contact</p>
-    <p class="text-center text-2xl md:text-4xl font-songti font-bold tracking-[-0.02em]">メニュー</p>
+    <p class="text-center text-2xl md:text-5xl md:pt-14 text-[#2C425F]  font-bigcarlos tracking-[-0.02em]">Contact</p>
+    <p class="text-center text-2xl md:text-4xl font-songti font-bold text-[#725E43] tracking-[-0.02em]">メニュー</p>
     <div class="flex gap-0 md:gap-32 justify-center font-kingscarlos text-2xl md:text-4xl mt-12 md:mt-14 text-[#725741] tracking-[-0.02em] leading-[2.625rem] flex-col md:flex-row">
       <div class="text-center w-full  md:w-[47.3%]">
         <PrismicRichText :field="settings.data.openHours" class="children-mb-0"/>

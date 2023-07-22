@@ -6,9 +6,9 @@
   <PrismicImage :field="page.data.bottom_image" class="m-auto pt-[300px]"/>
   <p class="text-center font-kingscarlos regularitalic text-[#725E43] md:text-2xl tracking-tight px-[30px] pb-[100px]">design by julian sirre · illustration by <a href="https://viktorhachmang.nl/">viktor hachmang</a> · build by alper çekinmez</p>
   <div class="absolute top-0 z-[-99]" id="background" ><div v-for="(item, i) in page.data.background" :key="`slice-item-${i}`" class="" >
-  <PrismicImage :field="item.image" class="h-[100vmax] object-cover walls opacity-0"/>
+  <PrismicImage :field="item.image" class="h-[100vmax] object-cover walls opacity-0 transition-all duration-[4000ms] ease-in-out"/>
   </div></div>
-  <button id="topitop" class="fixed duration-1000 bottom-28 md:bottom-1/3 right-0 lg:right-12 transition-all opacity-0 text-[#725E43] scale-y-50 text-2xl -translate-x-1/4" @click="toTop()">▲</button>
+  <button id="topitop" class="fixed duration-1000 bottom-28 md:bottom-1/3 right-0 lg:right-12 transition-all opacity-0 text-[#2C425F] scale-y-50 text-2xl -translate-x-1/4" @click="toTop()">▲</button>
 
     
   <div class="fixed top-[17px] md:top-[75px] lg:right-[9vw] right-[30px] z-40 md:w-[195px]">
@@ -23,7 +23,7 @@
      <div v-if="item.slice_type != 'how_to_eat_ramen' && item.slice_type != 'about'"> {{ item.slice_type }} </div><div v-if="item.slice_type == 'how_to_eat_ramen'" >how to eat Ramen</div>
   </div></div></div>
 
-  <div id="closedSign" class="fixed delay-[2000ms] duration-300 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden justify-items-center transition-all"><div class="font-songti tracking-[-0.02em] text-[3.5rem]">営業中</div><div class="font-bigcarlos tracking-[-0.02em] text-[2.5rem] border-t-[1px] border-black w-[200%] leading-tight">We are closed</div>
+  <div id="closedSign" class="fixed text-[#2C425F] delay-[2000ms] duration-300 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden justify-items-center transition-all"><div class="font-songti tracking-[-0.02em] text-[3.5rem]">営業中</div><div class="font-bigcarlos tracking-[-0.02em] text-[2.5rem] border-t-[1px] border-[#2C425F] w-[200%] leading-tight">We are closed</div>
   <div id="closedText" class="leading-none font-kingscarlos">We will be open on Monday</div></div>
    
 </div>
@@ -90,7 +90,10 @@ export default {
     else{
       vmax = window.innerWidth
     }
-    document.getElementsByClassName("walls")[0].classList.add("fadein")
+
+   
+    document.getElementsByClassName("walls")[0].style.opacity = "1"
+    
     document.getElementsByClassName("walls")[0].style.marginBottom = sections[2].offsetTop*1.3-vmax + "px"
     
     document.addEventListener("scroll", function(){ 
@@ -116,7 +119,7 @@ export default {
       list[index].firstElementChild.classList.add("onview")
 
       if(index == 2){
-      document.getElementsByClassName("walls")[1].classList.add("fadein")
+      document.getElementsByClassName("walls")[1].style.opacity = "1"
       }
     }
   }
@@ -185,14 +188,5 @@ li{
 }
 .mshowmenu{
   max-height: 60rem;
-}
-.fadein{
-  animation-name: fadein;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-}
-@keyframes fadein{
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
 </style>
