@@ -232,9 +232,9 @@ export default {
 
     expand(event){
       event.target.parentNode.nextElementSibling.classList.toggle("collapsed")
-      if (event.pointerType == "touch") {
+      
         event.target.parentNode.nextElementSibling.classList.remove("expandedfor")
-      }
+      
     },
     expand2(event){
       event.target.parentNode.nextElementSibling.classList.toggle("expanded")
