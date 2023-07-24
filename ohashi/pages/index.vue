@@ -149,7 +149,7 @@ export default {
      }
      else if (day == 1 || day == 7) {
       sign.style.display = "grid"
-      message.innerText = "We will be open next Tuesday"
+      message.innerText = "We will be open from Tuesday"
      }
 
 
