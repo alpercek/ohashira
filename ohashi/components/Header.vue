@@ -1,5 +1,5 @@
 <template>
-  <PrismicImage :field="settings.data.logo" class="mx-auto md:hidden py-5"/>
+  <PrismicImage :field="settings.data.logo" class="mx-auto w-10 md:hidden py-5"/>
 </template>
 
 <script>
