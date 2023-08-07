@@ -8,7 +8,7 @@
       "switch": {
         "type": "Boolean",
         "config": {
-          "label": "Is restaurant open",
+          "label": "Restaurant is open",
           "placeholder_false": "false",
           "placeholder_true": "true",
           "default_value": false

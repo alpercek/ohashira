@@ -1069,7 +1069,7 @@ export type SettingsDocument<Lang extends string = string> =
 /** Content for vacation documents */
 interface VacationDocumentData {
   /**
-   * Is restaurant open field in *vacation*
+   * Restaurant is open field in *vacation*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
