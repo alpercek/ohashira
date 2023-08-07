@@ -17,10 +17,10 @@
 </div>
 
 <div class="md:absolute text-[#725E43] top-16 lg:top-40 text-3xl md:text-4xl font-bigcarlos tracking-[-0.02em] md:w-3/12 text-center underline right-0 md:mr-[30px] lg:mr-[18vw] md:mt-0 mt-8">Everything on the menu is available for take away</div>
-<div class="flex gap-6 justify-between md:mt-10 flex-col md:flex-row text-[#725741]">
+<div class="flex md:gap-6 justify-between md:mt-10 flex-col md:flex-row text-[#725741]">
   <PrismicImage :field="slice.primary.image4" class="w-full mt-6 md:hidden block"/>
 <div class="md:w-[33.36%]">
-  <div class="font-bigcarlos text-3xl tracking-[-0.02em]"><span @click="expand2($event)" class="md:hidden flex relative justify-center"><div class="left-3 scale-y-50 rotate-[0deg] pointer-events-none text-[1.688rem]" >▼</div> Ramen</span> <span class="hidden text-[#3C5679] md:block"> Ramen</span></div>
+  <div class="font-bigcarlos text-3xl tracking-[-0.02em] mt-12 md:mt-0"><span @click="expand2($event)" class="md:hidden flex relative justify-center"><div class="left-3 scale-y-50 rotate-[0deg] pointer-events-none text-[1.688rem]" >▼</div> Ramen</span> <span class="hidden text-[#3C5679] md:block"> Ramen</span></div>
 <div class="overflow-hidden transition-all max-h-[999rem]"><div v-for="(item, i) in menu.data.ramen" :key="`slice-item-${i}`" :class="[item.spice , item.diet , 'lll']" class="mt-5 font-kingscarlos text-xl tracking-[-0.02em] flex gap-6 justify-between md:justify-start overflow-hidden">
   <div class="w-[73.5%] overflow-hidden"><PrismicRichText :field="item.title" @mouseover="expandfr($event)" @mouseout="collapsefr($event)" @click="expand($event)" class="cursor-pointer select-none"/>
   <PrismicRichText :field="item.description" class="text-lg transition-all max-h-0"/> </div>
@@ -298,6 +298,7 @@ export default {
   max-height: 0px;
 }
 .rotated{
+  transform-origin: 61% 36%;
   rotate: -90deg;
 }
 .expandedfor{
