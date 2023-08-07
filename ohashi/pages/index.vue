@@ -142,7 +142,7 @@ export default {
     var hour = now.getHours();
     let sign = document.getElementById("closedSign")
     let message = document.getElementById("closedText")
-     
+   
      if (hour < 17 || hour >= 22) {
       sign.style.display = "grid"
       message.innerText = "We will be open today from 17:30"
@@ -151,7 +151,9 @@ export default {
       sign.style.display = "grid"
       message.innerText = "We will be open from Tuesday"
      }
-
+     if (!this.$store.state.prismic.vacation.data.switch) {
+      message.innerText = this.$prismic.asText(this.$store.state.prismic.vacation.data.message)
+    }
 
     document.addEventListener("scroll", function() {
 

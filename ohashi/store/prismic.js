@@ -2,7 +2,8 @@ export const state = () => ({
   settings: {},
   navigation: {},
   about: {},
-  menu: {}
+  menu: {},
+  vacation: {}
 })
 
 export const mutations = {
@@ -17,6 +18,9 @@ export const mutations = {
   },
   setMenu (state, menu){
     state.menu = menu
+  },
+  setVacation (state, vacation){
+    state.vacation = vacation
   }
 }
 
@@ -26,10 +30,12 @@ export const actions = {
     const settings = await this.$prismic.api.getSingle('settings')
     const about = await this.$prismic.api.getSingle('about')
     const menu = await this.$prismic.api.getSingle('menu')
+    const vacation = await this.$prismic.api.getSingle('vacation')
 
     store.commit('setNavigation', navigation)
     store.commit('setSettings', settings)
     store.commit('setAbout', about)
     store.commit('setMenu', menu)
+    store.commit('setVacation', vacation)
   }
 }

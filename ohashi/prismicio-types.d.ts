@@ -1066,11 +1066,53 @@ export type SettingsDocument<Lang extends string = string> =
     "settings",
     Lang
   >;
+/** Content for vacation documents */
+interface VacationDocumentData {
+  /**
+   * Is restaurant open field in *vacation*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: vacation.switch
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  switch: prismicT.BooleanField;
+  /**
+   * message field in *vacation*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: vacation.message
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  message: prismicT.RichTextField;
+}
+/**
+ * vacation document from Prismic
+ *
+ * - **API ID**: `vacation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type VacationDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithoutUID<
+    Simplify<VacationDocumentData>,
+    "vacation",
+    Lang
+  >;
 export type AllDocumentTypes =
   | AboutDocument
   | MenuDocument
   | PageDocument
-  | SettingsDocument;
+  | SettingsDocument
+  | VacationDocument;
 /**
  * Primary content in About → Primary
  *
@@ -1524,6 +1566,8 @@ declare module "@prismicio/client" {
       PageDocument,
       SettingsDocumentData,
       SettingsDocument,
+      VacationDocumentData,
+      VacationDocument,
       AllDocumentTypes,
       AboutSliceDefaultPrimary,
       AboutSliceDefault,
