@@ -150,6 +150,17 @@ interface MenuDocumentData {
    */
   whisky: prismicT.GroupField<Simplify<MenuDocumentDataWhiskyItem>>;
   /**
+   * teancoffee field in *Menu*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.teancoffee[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  teancoffee: prismicT.GroupField<Simplify<MenuDocumentDataTeancoffeeItem>>;
+  /**
    * Soft Drinks field in *Menu*
    *
    * - **Field Type**: Group
@@ -345,28 +356,6 @@ export interface MenuDocumentDataDrinksItem {
    *
    */
   price: prismicT.RichTextField;
-  /**
-   * spice field in *Menu → Beer*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: not-spicy
-   * - **API ID Path**: menu.drinks[].spice
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  spice: prismicT.SelectField<"not-spicy" | "spicy" | "very-spicy", "filled">;
-  /**
-   * diet field in *Menu → Beer*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: omnivore
-   * - **API ID Path**: menu.drinks[].diet
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  diet: prismicT.SelectField<"omnivore" | "vegetarian" | "vegan", "filled">;
 }
 /**
  * Item in Menu → Shōchū
@@ -403,28 +392,6 @@ export interface MenuDocumentDataShochuItem {
    *
    */
   price: prismicT.RichTextField;
-  /**
-   * spice field in *Menu → Shōchū*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: not-spicy
-   * - **API ID Path**: menu.shochu[].spice
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  spice: prismicT.SelectField<"not-spicy" | "spicy" | "very-spicy", "filled">;
-  /**
-   * diet field in *Menu → Shōchū*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: omnivore
-   * - **API ID Path**: menu.shochu[].diet
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  diet: prismicT.SelectField<"omnivore" | "vegetarian" | "vegan", "filled">;
 }
 /**
  * Item in Menu → Sake
@@ -461,28 +428,6 @@ export interface MenuDocumentDataSakeItem {
    *
    */
   price: prismicT.RichTextField;
-  /**
-   * spice field in *Menu → Sake*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: not-spicy
-   * - **API ID Path**: menu.sake[].spice
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  spice: prismicT.SelectField<"not-spicy" | "spicy" | "very-spicy", "filled">;
-  /**
-   * diet field in *Menu → Sake*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: omnivore
-   * - **API ID Path**: menu.sake[].diet
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  diet: prismicT.SelectField<"omnivore" | "vegetarian" | "vegan", "filled">;
 }
 /**
  * Item in Menu → Wine
@@ -519,28 +464,6 @@ export interface MenuDocumentDataWineItem {
    *
    */
   price: prismicT.RichTextField;
-  /**
-   * spice field in *Menu → Wine*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: not-spicy
-   * - **API ID Path**: menu.wine[].spice
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  spice: prismicT.SelectField<"not-spicy" | "spicy" | "very-spicy", "filled">;
-  /**
-   * diet field in *Menu → Wine*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: omnivore
-   * - **API ID Path**: menu.wine[].diet
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  diet: prismicT.SelectField<"omnivore" | "vegetarian" | "vegan", "filled">;
 }
 /**
  * Item in Menu → Whisky
@@ -577,28 +500,42 @@ export interface MenuDocumentDataWhiskyItem {
    *
    */
   price: prismicT.RichTextField;
+}
+/**
+ * Item in Menu → teancoffee
+ *
+ */
+export interface MenuDocumentDataTeancoffeeItem {
   /**
-   * spice field in *Menu → Whisky*
+   * title field in *Menu → teancoffee*
    *
-   * - **Field Type**: Select
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **Default Value**: not-spicy
-   * - **API ID Path**: menu.whisky[].spice
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   * - **API ID Path**: menu.teancoffee[].title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  spice: prismicT.SelectField<"not-spicy" | "spicy" | "very-spicy", "filled">;
+  title: prismicT.RichTextField;
   /**
-   * diet field in *Menu → Whisky*
+   * description field in *Menu → teancoffee*
    *
-   * - **Field Type**: Select
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **Default Value**: omnivore
-   * - **API ID Path**: menu.whisky[].diet
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   * - **API ID Path**: menu.teancoffee[].description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  diet: prismicT.SelectField<"omnivore" | "vegetarian" | "vegan", "filled">;
+  description: prismicT.RichTextField;
+  /**
+   * price field in *Menu → teancoffee*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.teancoffee[].price
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  price: prismicT.RichTextField;
 }
 /**
  * Item in Menu → Soft Drinks
@@ -635,28 +572,6 @@ export interface MenuDocumentDataSoftDrinksItem {
    *
    */
   price: prismicT.RichTextField;
-  /**
-   * spice field in *Menu → Soft Drinks*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: not-spicy
-   * - **API ID Path**: menu.soft_drinks[].spice
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  spice: prismicT.SelectField<"not-spicy" | "spicy" | "very-spicy", "filled">;
-  /**
-   * diet field in *Menu → Soft Drinks*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: omnivore
-   * - **API ID Path**: menu.soft_drinks[].diet
-   * - **Documentation**: https://prismic.io/docs/core-concepts/select
-   *
-   */
-  diet: prismicT.SelectField<"omnivore" | "vegetarian" | "vegan", "filled">;
 }
 /**
  * Item in Menu → Side Dishes
@@ -1555,6 +1470,7 @@ declare module "@prismicio/client" {
       MenuDocumentDataSakeItem,
       MenuDocumentDataWineItem,
       MenuDocumentDataWhiskyItem,
+      MenuDocumentDataTeancoffeeItem,
       MenuDocumentDataSoftDrinksItem,
       MenuDocumentDataSideDishesItem,
       MenuDocumentDataCurryItem,

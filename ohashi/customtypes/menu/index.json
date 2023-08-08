@@ -142,24 +142,6 @@
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
-            },
-            "spice": {
-              "type": "Select",
-              "config": {
-                "label": "spice",
-                "placeholder": "",
-                "options": ["not-spicy", "spicy", "very-spicy"],
-                "default_value": "not-spicy"
-              }
-            },
-            "diet": {
-              "type": "Select",
-              "config": {
-                "label": "diet",
-                "placeholder": "",
-                "options": ["omnivore", "vegetarian", "vegan"],
-                "default_value": "omnivore"
-              }
             }
           }
         }
@@ -194,24 +176,6 @@
                 "placeholder": "",
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "spice": {
-              "type": "Select",
-              "config": {
-                "label": "spice",
-                "placeholder": "",
-                "options": ["not-spicy", "spicy", "very-spicy"],
-                "default_value": "not-spicy"
-              }
-            },
-            "diet": {
-              "type": "Select",
-              "config": {
-                "label": "diet",
-                "placeholder": "",
-                "options": ["omnivore", "vegetarian", "vegan"],
-                "default_value": "omnivore"
               }
             }
           }
@@ -248,24 +212,6 @@
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
-            },
-            "spice": {
-              "type": "Select",
-              "config": {
-                "label": "spice",
-                "placeholder": "",
-                "options": ["not-spicy", "spicy", "very-spicy"],
-                "default_value": "not-spicy"
-              }
-            },
-            "diet": {
-              "type": "Select",
-              "config": {
-                "label": "diet",
-                "placeholder": "",
-                "options": ["omnivore", "vegetarian", "vegan"],
-                "default_value": "omnivore"
-              }
             }
           }
         }
@@ -300,24 +246,6 @@
                 "placeholder": "",
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "spice": {
-              "type": "Select",
-              "config": {
-                "label": "spice",
-                "placeholder": "",
-                "options": ["not-spicy", "spicy", "very-spicy"],
-                "default_value": "not-spicy"
-              }
-            },
-            "diet": {
-              "type": "Select",
-              "config": {
-                "label": "diet",
-                "placeholder": "",
-                "options": ["omnivore", "vegetarian", "vegan"],
-                "default_value": "omnivore"
               }
             }
           }
@@ -354,23 +282,40 @@
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
-            },
-            "spice": {
-              "type": "Select",
+            }
+          }
+        }
+      },
+      "teancoffee": {
+        "type": "Group",
+        "config": {
+          "label": "teancoffee",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
               "config": {
-                "label": "spice",
+                "label": "title",
                 "placeholder": "",
-                "options": ["not-spicy", "spicy", "very-spicy"],
-                "default_value": "not-spicy"
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
             },
-            "diet": {
-              "type": "Select",
+            "description": {
+              "type": "StructuredText",
               "config": {
-                "label": "diet",
+                "label": "description",
                 "placeholder": "",
-                "options": ["omnivore", "vegetarian", "vegan"],
-                "default_value": "omnivore"
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "price": {
+              "type": "StructuredText",
+              "config": {
+                "label": "price",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
               }
             }
           }
@@ -406,24 +351,6 @@
                 "placeholder": "",
                 "allowTargetBlank": true,
                 "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-              }
-            },
-            "spice": {
-              "type": "Select",
-              "config": {
-                "label": "spice",
-                "placeholder": "",
-                "options": ["not-spicy", "spicy", "very-spicy"],
-                "default_value": "not-spicy"
-              }
-            },
-            "diet": {
-              "type": "Select",
-              "config": {
-                "label": "diet",
-                "placeholder": "",
-                "options": ["omnivore", "vegetarian", "vegan"],
-                "default_value": "omnivore"
               }
             }
           }
