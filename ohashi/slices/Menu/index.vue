@@ -38,7 +38,7 @@
 
 
 <div class="md:w-[42.1%]">
-  <PrismicImage :field="slice.primary.image3" class="w-full"/>
+  <PrismicImage :field="slice.primary.image3" class="w-full mt-6 md:mt-0"/>
   <PrismicImage :field="slice.primary.image4" class="w-3/4 mt-6 hidden md:block" />
   <div class="font-bigcarlos text-3xl tracking-[-0.02em] mt-12"><span @click="expand2($event)" class="md:hidden flex gap-1 relative justify-center"><div  class="left-3 scale-y-50 rotate-[0deg] pointer-events-none text-[1.688rem]" >▼</div>Drinks</span> <span class="hidden md:block">Drinks</span></div>
   <div class="overflow-hidden transition-all max-h-[999rem]">
