@@ -23,8 +23,8 @@
      <div v-if="item.slice_type != 'how_to_eat_ramen' && item.slice_type != 'about'"> {{ item.slice_type }} </div><div v-if="item.slice_type == 'how_to_eat_ramen'" >how to eat Ramen</div>
   </div></div><div @click="expandMenu = !expandMenu" class="w-full h-full"></div></div>
 
-  <div id="closedSign" class="fixed text-[#2C425F] delay-[2000ms] duration-300 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden justify-items-center transition-all"><div class="font-songti tracking-[-0.02em] text-[3.5rem] md:text-[4.375rem]">営業中</div><div class="font-bigcarlos tracking-[-0.02em] text-[3.375rem] md:text-[2.75rem] border-t-[1px] border-[#2C425F] w-[200%] leading-tight">We are closed</div>
-  <div id="closedText" class="leading-none text-[1.875rem] text-xl font-kingscarlos">We will be open on Monday</div></div>
+  <div id="closedSign" class="fixed text-[#2C425F] delay-[2000ms] duration-300 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-items-center transition-all w-screen md:w-auto"><div class="font-songti hidden tracking-[-0.02em] text-[3.5rem] m-auto md:text-[4.375rem]">営業中</div><div class="font-bigcarlos hidden tracking-[-0.02em] text-[2.5rem] md:text-[3.375rem] border-t-[1px] border-[#2C425F] m-auto leading-tight">We are closed</div>
+  <div id="closedText" class="leading-none m-auto hidden text-[1.875rem] text-xl font-kingscarlos">We will be open on Monday</div><div id="message" class="leading-none text-[1.875rem] text-xl font-kingscarlos">{{this.$prismic.asText(this.$store.state.prismic.vacation.data.message)}}</div></div>
    
 </div>
 </template>
@@ -142,21 +142,28 @@ export default {
     var hour = now.getHours();
     let sign = document.getElementById("closedSign")
     let message = document.getElementById("closedText")
-   
      if (hour < 17 || hour >= 22) {
-      sign.style.display = "grid"
+    
+      for (let index = 0; index < sign.children.length-1; index++) {
+        sign.children[index].style.display = "block"
+        }
       message.innerText = "We will be open today from 17:30"
      }
      else if (day == 1 || day == 7) {
-      sign.style.display = "grid"
+      for (let index = 0; index < sign.children.length-1; index++) {
+        sign.children[index].style.display = "block"
+        }
       message.innerText = "We will be open from Tuesday"
      }
      if (!this.$store.state.prismic.vacation.data.switch) {
-      message.innerText = this.$prismic.asText(this.$store.state.prismic.vacation.data.message)
+      for (let index = 0; index < sign.children.length-1; index++) {
+        sign.children[index].style.display = "block"
+        }
+      message.style.display = "none"
     }
 
     document.addEventListener("scroll", function() {
-
+      
       document.getElementById('closedSign').style.opacity = "0"
       setTimeout(() => {
         document.getElementById('closedSign').style.display = "none"

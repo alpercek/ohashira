@@ -1,10 +1,11 @@
 <template>
-   <Bounded as="section" class="mt-20 md:mt-0">
+   <Bounded as="section" class="mt-20 md:mt-0 relative">
     <p class="text-center text-2xl md:text-5xl md:pt-14 text-[#2C425F]  font-bigcarlos tracking-[-0.02em]">Contact</p>
     <p class="text-center text-2xl md:text-4xl font-songti font-bold text-[#725E43] tracking-[-0.02em]">メニュー</p>
     <div class="flex gap-0 md:gap-32 justify-center font-kingscarlos text-2xl md:text-4xl mt-12 md:mt-14 text-[#725741] tracking-[-0.02em] leading-[2.625rem] flex-col md:flex-row">
       <div class="text-center w-full  md:w-[47.3%]">
         <PrismicRichText :field="settings.data.openHours" class="children-mb-0"/>
+        <div v-if="this.$prismic.asText(this.$store.state.prismic.vacation.data.message).length !== 0" class="mt-11 lg:absolute lg:bottom-[100px] left-1/2 lg:-translate-x-1/2">{{this.$prismic.asText(this.$store.state.prismic.vacation.data.message)}}</div>
         <a href="http://maps.google.com/?q=RAMEN OHASHİ"><PrismicRichText :field="settings.data.street" class="underline mt-11 md:mt-20" />
         <PrismicRichText :field="settings.data.city" class="underline" /></a>
         <PrismicRichText :field="settings.data.tram" class="text-lg md:text-xl mb-9 md:mb-7" />
