@@ -7,7 +7,7 @@
     <PrismicImage :field="slice.primary.littletext" class="md:absolute right-[14%] top-[calc(19vw+345px)] w-[1.625rem] m-auto mt-3.5 md:w-[2.6%]" />
    
 
-    <div class="md:flex md:mt-16 mt-4 gap-6 justify-center"><div class="md:w-[calc(32vw-0.75rem)]"><PrismicImage :field="slice.primary.image1" class="w-full" /><PrismicRichText :field="slice.primary.label1"  class="hidden pr-[5px] md:block text-right text-xl italic font-kingscarlos tracking-[-0.015em] text-[#969696]"/></div>
+    <div id="entry" class="md:flex opacity-30 transition-all md:mt-16 mt-4 gap-6 justify-center"><div class="md:w-[calc(32vw-0.75rem)]"><PrismicImage :field="slice.primary.image1" class="w-full" /><PrismicRichText :field="slice.primary.label1"  class="hidden pr-[5px] md:block text-right text-xl italic font-kingscarlos tracking-[-0.015em] text-[#969696]"/></div>
 
     <div class="md:hidden text-center max-w-xl m-auto text-2xl md:text-4xl tracking-[-0.02em] font-bigcarlos text-[#725741] mt-7 leading-[1.875rem]">Authentic Japanese handmade ramen noodles by chef <span class="underline">Masanao Ohashi</span></div>
     <div class="flex flex-wrap md:hidden justify-evenly gap-x-2 xl:text-xl text-[#725741] font-bigcarlos mt-9"><PrismicRichText :field="settings.data.siteTitle" class="italic" /><PrismicRichText :field="settings.data.street" /><PrismicRichText :field="settings.data.city" /><PrismicRichText :field="settings.data.phone" /><PrismicRichText :field="settings.data.mail" /></div>
