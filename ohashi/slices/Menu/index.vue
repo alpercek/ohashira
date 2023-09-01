@@ -125,6 +125,13 @@ export default {
       return this.$store.state.prismic.menu
     }
   },
+  mounted() {
+ let veganElements = document.getElementsByClassName("vegan")
+ for (let index = 0; index < veganElements.length; index++) {
+  veganElements[index].classList.add("vegetarian")
+  
+ }
+  },
   methods: {
     change(event) {
   switch (event.target.name) {

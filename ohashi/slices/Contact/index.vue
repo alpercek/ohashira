@@ -20,7 +20,7 @@
          <span>Name:</span><br><input type="text" required name="name" class="rounded-full bg-[#FCF2E8] border-[1px] border-[#707070] px-2 mb-6 w-full text-xl"> <br>
          <span>E-mail address:</span><br><input type="email" required name="email" class="rounded-full bg-[#FCF2E8] border-[1px] border-[#707070] px-2 mb-6 w-full text-xl"><br>
          <span>Telephone number:</span><br><input type="text" name="phone number" class="rounded-full bg-[#FCF2E8] border-[1px] border-[#707070] px-2 mb-6 w-full text-xl"><br>
-         <span>How may we help you?</span><br><textarea type="text" name="message" class="px-2 h-36 bg-[#FCF2E8] border-[1px] border-[#707070] w-full text-xl"></textarea> <br>
+         <span>How may we help you?</span><div class="text-[1.25rem]">Please include time and amount of people for reservations.</div><textarea type="text" name="message" class="px-2 h-36 bg-[#FCF2E8] border-[1px] border-[#707070] w-full text-xl"></textarea> <br>
          <input type="button" @click="formSub()"  value="送信" class="font-songti text-white bg-[#725741] rounded-full px-4 text-2xl float-right cursor-pointer">
       </form>
       <audio id="clicksound" @ended="formSubfr()" :src="audio.url" ></audio>
