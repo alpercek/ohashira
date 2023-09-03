@@ -23,7 +23,7 @@
      <div v-if="item.slice_type != 'how_to_eat_ramen' && item.slice_type != 'about'"> {{ item.slice_type }} </div><div v-if="item.slice_type == 'how_to_eat_ramen'" >how to eat Ramen</div>
   </div></div><div @click="expandMenu = !expandMenu" class="w-full h-full"></div></div>
 
-  <div id="closedSign" class="fixed text-[#2C425F] delay-[2000ms] duration-300 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-items-center transition-all w-screen md:w-auto"><div class="font-songti hidden tracking-[-0.02em] text-[3.5rem] m-auto md:text-[4.375rem]">営業中</div><div class="font-bigcarlos hidden tracking-[-0.02em] text-[2.5rem] md:text-[3.375rem] border-t-[1px] border-[#2C425F] m-auto leading-tight">We are closed</div>
+  <div id="closedSign" class="fixed text-[#2C425F] delay-[2000ms] duration-300 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 justify-items-center transition-all w-screen md:w-auto"><div class="font-songti hidden tracking-[-0.02em] text-[3.5rem] m-auto md:text-[4.375rem]">準備中</div><div class="font-bigcarlos hidden tracking-[-0.02em] text-[2.5rem] md:text-[3.375rem] border-t-[1px] border-[#2C425F] m-auto leading-tight">We are closed</div>
   <div id="closedText" class="leading-none m-auto hidden md:text-4xl text-xl tracking-[-0.02em] px-4 font-kingscarlos">We will be open on Monday</div><div id="message" class="leading-none text-2xl leading-[1.75rem] px-4 md:text-5xl tracking-[-0.02em] pt-4 font-kingscarlos">{{this.$prismic.asText(this.$store.state.prismic.vacation.data.message)}}</div></div>
    
 </div>
