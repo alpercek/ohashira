@@ -14,7 +14,7 @@
       </div>
       
       
-        <form id="formm" action="https://formsubmit.co/ramenohashi.nl@gmail.com" method="POST" class="w-full md:w-[39.7%] hidden md:block">
+        <form id="formm" action="https://formsubmit.co/ramenohashi.nl@gmail.com" method="POST" class="w-full md:w-[39.7%] block">
           <input id="nextrefresh" type="hidden" name="_next" value="https://www.ramenohashi.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="text" name="_honey" style="display:none">
