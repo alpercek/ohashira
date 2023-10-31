@@ -19,7 +19,7 @@
   </div></div>
   </div>
   </div>
-  <div :class="{ mshowmenu: expandMenu}" class=" overflow-hidden transition-all max-h-0 fixed top-0 w-screen md:hidden bg-[#DCE0DF]/80 z-30 h-screen" ><div class="mt-28" > <div id="mobilemen" v-for="(item, i) in page.data.slices" :key="`slice-item-${i}`" @click="skate(i)" class="text-center font-bigcarlos text-4xl text-[#725E43] tracking-[-0.02em] mb-12 cursor-pointer">
+  <div :class="{ mshowmenu: expandMenu}" class=" overflow-hidden transition-all max-h-0 fixed top-0 w-screen md:hidden bg-[#DCE0DF]/80 z-30 h-screen select-none" ><div class="mt-28" > <div id="mobilemen" v-for="(item, i) in page.data.slices" :key="`slice-item-${i}`" @click="skate(i)" class="select-none text-center font-bigcarlos text-4xl text-[#725E43] tracking-[-0.02em] mb-12 cursor-pointer">
      <div v-if="item.slice_type != 'how_to_eat_ramen' && item.slice_type != 'about'"> {{ item.slice_type }} </div><div v-if="item.slice_type == 'how_to_eat_ramen'" >how to eat Ramen</div>
   </div></div><div @click="expandMenu = !expandMenu" class="w-full h-full"></div></div>
 
