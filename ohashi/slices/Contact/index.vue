@@ -14,7 +14,7 @@
       </div>
       
       
-        <form id="formm" action="https://formsubmit.co/ramenohashi.nl@gmail.com" method="POST" class="w-full md:w-[39.7%] block">
+        <form id="formm" action="https://formsubmit.co/ramenohashi.nl@gmail.com" method="POST" class="w-full md:w-[39.7%] block relative">
           <input id="nextrefresh" type="hidden" name="_next" value="https://www.ramenohashi.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="text" name="_honey" style="display:none">
@@ -23,6 +23,7 @@
          <span>Telephone number:</span><br><input type="text" name="phone number" class="rounded-full bg-[#FCF2E8] border-[1px] border-[#707070] px-2 mb-6 w-full text-xl"><br>
          <span>How may we help you?</span><div class="text-[1.25rem]">Please include time and amount of people for reservations.</div><textarea type="text" name="message" class="px-2 h-36 bg-[#FCF2E8] border-[1px] border-[#707070] w-full text-xl"></textarea> <br>
          <input type="button" @click="formSub()"  value="送信" class="font-songti text-white bg-[#725741] rounded-full px-4 text-2xl float-right cursor-pointer">
+         <p id="pizzaboy" class="absolute right-0 bottom-0 translate-x-[5%] translate-y-[100%] hidden text-lg" >Message Sent!</p>
       </form>
       <audio id="clicksound" @ended="formSubfr()" :src="audio.url" ></audio>
     </div>
@@ -51,6 +52,7 @@ export default {
     },
     formSubfr(){
       document.getElementById("formm").submit();
+      document.getElementById('pizzaboy').style.display = 'block'
     }
   },
   mounted() {
