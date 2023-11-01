@@ -17,6 +17,7 @@
         <form id="formm" action="https://formsubmit.co/ramenohashi.nl@gmail.com" method="POST" class="w-full md:w-[39.7%] block relative">
           <input id="nextrefresh" type="hidden" name="_next" value="https://www.ramenohashi.com">
           <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_autoresponse" value="Your submission to Ramen Ohashi have been recieved.">
           <input type="text" name="_honey" style="display:none">
          <span>Name:</span><br><input type="text" required name="name" class="rounded-full bg-[#FCF2E8] border-[1px] border-[#707070] px-2 mb-6 w-full text-xl"> <br>
          <span>E-mail address:</span><br><input type="email" required name="email" class="rounded-full bg-[#FCF2E8] border-[1px] border-[#707070] px-2 mb-6 w-full text-xl"><br>
